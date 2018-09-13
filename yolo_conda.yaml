@@ -1,0 +1,13 @@
+# mlflow-keras-example/yolo_conda.yaml
+
+name: mlflow-keras-example
+channels:
+  - defaults
+dependencies:
+  - numpy==1.14.2
+  - matplotlib==2.2.2
+  - pip:
+    - mlflow==0.5.2
+    - keras==2.2.2
+    - tensorflow==1.8.0
+    - Pillow==5.1.0

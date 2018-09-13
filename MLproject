@@ -1,0 +1,17 @@
+name: Keras YOLOv3
+
+conda_env: yolo_conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      annotation_path: {type: str, default: "voc/list_master.txt"}
+      weights_path: {type: str, default: "model_data/yolov3-tiny.h5"}
+      classes_path: {type: str, default: "model_data/yolo_custom_classes.txt"}
+      anchors_path: {type: str, default: "model_data/yolo_tiny_anchors.txt"}
+      log_dir: {type: str, default: "logs/default"}
+      initial_lr: {type: float, default: 1e-2}
+      batch_size: {type: int, default: 16}
+      frozen_epochs: {type: int, default: 10}
+      fine_tune_epochs: {type: int, default: 20}
+    command: "python train.py --annotation_path {annotation_path} --weights_path {weights_path} --classes_path {classes_path} --anchors_path {anchors_path} --log_dir {log_dir} --initial_lr {initial_lr} --batch_size {batch_size} --frozen_epochs {frozen_epochs} --fine_tune_epochs {fine_tune_epochs}"

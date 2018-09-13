@@ -1,0 +1,10 @@
+artifact_path: keras-yolo-model
+flavors:
+  keras:
+    keras_version: 2.2.2
+  python_function:
+    data: model.h5
+    loader_module: mlflow.keras
+    python_version: 3.6.6
+run_id: 8237d734f1d94fd893368dd455565f2d
+utc_time_created: '2018-09-11 15:21:55.374911'

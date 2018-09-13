@@ -1,0 +1,2 @@
+obj
+no_obj
